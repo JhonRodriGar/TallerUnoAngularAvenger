@@ -19,8 +19,7 @@ export class InicioComponent implements OnInit {
     this.inicio[idx].sumaDisLike = this.inicio[idx].sumaDisLike+1;
   }
 
-  constructor( private _inicioService: inicioService,
-               private router: Router) { }
+  constructor( private _inicioService: inicioService) { }
 
   ngOnInit() {
     this.inicio = this._inicioService.getPersonajes();

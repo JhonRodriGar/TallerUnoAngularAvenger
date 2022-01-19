@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { RankingComponent } from './componentes/ranking/ranking.component';
+import { IniciologoComponent } from './componentes/iniciologo/iniciologo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     InicioComponent,
-    RankingComponent
+    RankingComponent,
+    IniciologoComponent
   ],
   imports: [
     BrowserModule,
