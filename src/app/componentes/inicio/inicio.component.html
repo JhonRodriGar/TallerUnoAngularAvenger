@@ -1,0 +1,24 @@
+<h1>Los personajes de su pelicula favorita en <small>MovieAction</small>
+</h1>
+<hr>
+
+<div class="row row-cols-2 row-cols-md-2 g-4">
+  <div class="card animated fadeIn fast" *ngFor="let personaje of inicio; let i = index">
+    <img class="card-img-top" [src]="personaje.img" [alt]="personaje.nombre">
+    <div class="card-body">
+      <h4 class="card-title">{{ personaje.nombre }}</h4>
+      <p class="card-text">{{ personaje.alias }}</p>
+      <p class="card-text">{{ personaje.especie }}</p>
+      <p class="card-text">{{ personaje.nacionalidad }}</p>
+      <p class="card-text">{{ personaje.fecha_nacimiento }}</p>
+      <p class="card-text"><small class="text-muted">{{ personaje.frase }}</small> </p>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <button (click)="contarlike(i)" type="button" class="btn btn-outline-primary btn-block">Me gusta</button>
+        <h3>{{ this.inicio[i].sumaLike }}</h3>
+        <button (click)="contarDislike(i)" type="button" class="btn btn-outline-primary btn-block">No me gusta</button>
+        <h3>{{ this.inicio[i].sumaDisLike }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
